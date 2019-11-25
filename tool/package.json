@@ -4,7 +4,7 @@
   "description": "ledger-live CLI version",
   "repository": {
     "type": "git",
-    "url": "git://github.com/LedgerHQ/ledger-live-common"
+    "url": "git://github.com/kiroboio/ledger-live-common"
   },
   "dependencies": {
     "@ledgerhq/errors": "^4.72.2",
