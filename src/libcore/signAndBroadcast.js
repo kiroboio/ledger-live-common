@@ -140,7 +140,7 @@ export default ({
       },
       onSigned: signedTransaction => {
         log("libcore", "signed transaction " + String(signedTransaction));
-        o.next({ type: "signed" });
+        o.next({ type: "signed", signedTransaction });
       },
       onOperationBroadcasted: operation => {
         log("libcore", "broadcasted to " + String(operation.hash));
