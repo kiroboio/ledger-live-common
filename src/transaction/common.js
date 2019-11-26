@@ -11,7 +11,8 @@ export const fromTransactionCommonRaw = (
 ): TransactionCommon => {
   const common: TransactionCommon = {
     amount: BigNumber(raw.amount),
-    recipient: raw.recipient
+    recipient: raw.recipient,
+    disableBroadcast: raw.disableBroadcast
   };
   if ("useAllAmount" in raw) {
     common.useAllAmount = raw.useAllAmount;
@@ -27,7 +28,8 @@ export const toTransactionCommonRaw = (
 ): TransactionCommonRaw => {
   const common: TransactionCommonRaw = {
     amount: raw.amount.toString(),
-    recipient: raw.recipient
+    recipient: raw.recipient,
+    disableBroadcast: raw.disableBroadcast
   };
   if ("useAllAmount" in raw) {
     common.useAllAmount = raw.useAllAmount;
