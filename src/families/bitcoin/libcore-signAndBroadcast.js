@@ -14,7 +14,7 @@ async function bitcoin({
 }: *) {
   const bitcoinLikeAccount = await coreAccount.asBitcoinLikeAccount();
 
-  const txHash = getEnv("DISABLE_TRANSACTION_BROADCAST")
+  const txHash = getEnv("DISABLE_TRANSACTION_BROADCAST") || extra.disableTransactionBroadcast
     ? ""
     : await bitcoinLikeAccount.broadcastRawTransaction(signedTransaction);
 
