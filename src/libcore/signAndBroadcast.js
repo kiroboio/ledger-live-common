@@ -99,6 +99,8 @@ const doSignAndBroadcast = withLibcoreF(
 
     onSigned(signedTransaction);
 
+    if (transaction.disableBroadcast) return;
+
     const f = byFamily[account.currency.family];
     if (!f) {
       throw new Error(
